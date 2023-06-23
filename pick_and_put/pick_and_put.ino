@@ -43,7 +43,7 @@ void loop() {
   delta = calculate_delta(claw_curr_pos, claw_open_pos);
   
   for (claw_curr_pos; claw_curr_pos != claw_open_pos; claw_curr_pos += delta){
-    base.write(claw_curr_pos);
+    claw.write(claw_curr_pos);
     delay(micro_movement_delay);
   }
     
@@ -51,7 +51,7 @@ void loop() {
   delta = calculate_delta(joint_curr_pos, joint_down_pos);
   
   for (joint_curr_pos; joint_curr_pos != joint_down_pos; joint_curr_pos += delta){
-    base.write(joint_curr_pos);
+    joint.write(joint_curr_pos);
     delay(micro_movement_delay);
   }
   
@@ -59,7 +59,7 @@ void loop() {
   delta = calculate_delta(claw_curr_pos, claw_close_pos);
   
   for (claw_curr_pos; claw_curr_pos != claw_close_pos; claw_curr_pos += delta){
-    base.write(claw_curr_pos);
+    claw.write(claw_curr_pos);
     delay(micro_movement_delay);
   }
   
@@ -67,7 +67,7 @@ void loop() {
   delta = calculate_delta(joint_curr_pos, joint_up_pos);
   
   for (joint_curr_pos; joint_curr_pos != joint_up_pos; joint_curr_pos += delta){
-    base.write(joint_curr_pos);
+    joint.write(joint_curr_pos);
     delay(micro_movement_delay);
   }
 
@@ -83,7 +83,7 @@ void loop() {
   delta = calculate_delta(joint_curr_pos, joint_down_pos);
   
   for (joint_curr_pos; joint_curr_pos != joint_down_pos; joint_curr_pos += delta){
-    base.write(joint_curr_pos);
+    joint.write(joint_curr_pos);
     delay(micro_movement_delay);
   }
   
@@ -91,7 +91,7 @@ void loop() {
   delta = calculate_delta(claw_curr_pos, claw_open_pos);
   
   for (claw_curr_pos; claw_curr_pos != claw_open_pos; claw_curr_pos += delta){
-    base.write(claw_curr_pos);
+    claw.write(claw_curr_pos);
     delay(micro_movement_delay);
   }
 
@@ -99,7 +99,7 @@ void loop() {
   delta = calculate_delta(joint_curr_pos, joint_up_pos);
   
   for (joint_curr_pos; joint_curr_pos != joint_up_pos; joint_curr_pos += delta){
-    base.write(joint_curr_pos);
+    joint.write(joint_curr_pos);
     delay(micro_movement_delay);
   }
 }
